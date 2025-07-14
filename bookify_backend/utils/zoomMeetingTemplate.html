@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Meeting Scheduled</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <style>
+        body, table, td, h1, h2, h3, h4, h5, h6, p, a, div {
+            font-family: 'Poppins', Arial, sans-serif !important;
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; margin: 0;">
+    <div style="max-width:600px; margin:auto; background:#ffffff; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.15); overflow:hidden;">
+        
+        <!-- Header -->
+        <div style="background:linear-gradient(90deg,#2563eb,#9333ea); color:#ffffff; padding:20px; text-align:center;">
+            <h1 style="margin:0;">Your Zoom Meeting is Scheduled!</h1>
+            <p>Your online appointment has been successfully scheduled.</p>
+        </div>
+
+        <!-- Main Content -->
+        <div style="padding:20px;">
+            <p style="font-size:16px;">Hello <strong>{{firstName}} {{lastName}}</strong>,</p>
+            <p>Thank you for booking with <strong>{{businessName}}</strong>. Here are your Zoom meeting details:</p>
+
+            <!-- Details -->
+            <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+                <tr>
+                    <td style="padding:10px; border-bottom:1px solid #ddd;">
+                        📅 <strong>Date:</strong> {{date}}
+                    </td>
+                    <td style="padding:10px; border-bottom:1px solid #ddd;">
+                        ⏰ <strong>Time:</strong> {{time}}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border-bottom:1px solid #ddd;">
+                        📧 <strong>Email:</strong> {{email}}
+                    </td>
+                    <td style="padding:10px; border-bottom:1px solid #ddd;">
+                        📞 <strong>Phone:</strong> {{phone}}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border-bottom:1px solid #ddd;">
+                        💼 <strong>Service:</strong> {{service}}
+                    </td>
+                    <td style="padding:10px; border-bottom:1px solid #ddd;">
+                        🏢 <strong>Business:</strong> {{businessName}}
+                    </td>
+                </tr>
+            </table>
+
+            <hr style="border:none; border-top:1px solid #ddd; margin:20px 0;">
+
+            <!-- Zoom Meeting Info -->
+            <div style="background-color:#f9fafb; border-left:4px solid #2563eb; padding:16px 20px; margin-bottom:20px; font-size:15px; color:#444;">
+                <strong>Zoom Meeting Link:</strong><br>
+                <a href="{{zoomLink}}" style="color:#2563eb; word-break:break-all;">{{zoomLink}}</a><br>
+                <strong>Meeting ID:</strong> {{meetingId}}<br>
+                <strong>Passcode:</strong> {{passcode}}
+            </div>
+
+            <div style="background-color:#f9fafb; border-left:4px solid #9333ea; padding:16px 20px; margin-bottom:20px; font-size:15px; color:#444;">
+                <strong>Note:</strong> Please join the meeting a few minutes before your scheduled time. If you have any issues joining, contact us at <a href="mailto:{{businessEmail}}" style="color:#2563eb;">{{businessEmail}}</a>.
+            </div>
+
+            <!-- Footer -->
+            <p style="text-align:center;">
+                Looking forward to meeting you online!<br>
+                <span style="color:#888;">If you have any questions, please reply to this email.</span>
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div style="background-color:#f0f0f0; padding:10px; text-align:center; color:#555; font-size:12px;">
+            &copy; {{businessName}}. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <!-- Inline styles for Gmail compatibility -->
+</head>
+<body style="font-family: 'Poppins', Arial, sans-serif; background-color: #f4f4f4; padding: 0; margin: 0; font-size: 16px; line-height: 1.5; color: #333;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.15); overflow: hidden;">
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#7e22ce" style="background: linear-gradient(90deg, #7e22ce, #3b82f6); color: #ffffff; padding: 20px; text-align: center;">
+                <h1 style="margin: 0; font-size: 24px; font-weight: 600;">Appointment Booked Successfully!</h1>
+                <p style="margin: 5px 0; font-size: 16px;">Your appointment has been successfully scheduled.</p>
+            </td>
+        </tr>
+
+        <!-- Main Content -->
+        <tr>
+            <td style="padding: 20px;">
+                <p style="font-size: 16px;">Hello <strong>{{firstName}} {{lastName}}</strong>,</p>
+                <p style="font-size: 16px;">Thank you for booking with <strong>{{businessName}}</strong>. Here are your appointment details:</p>
+
+                <!-- Details Table -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-top: 20px;">
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                            📅 <strong>Date:</strong> {{date}}
+                        </td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                            ⏰ <strong>Time:</strong> {{timeSlot}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                            📧 <strong>Email:</strong> {{email}}
+                        </td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                            📞 <strong>Phone:</strong> {{phone}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                            👤 <strong>Host:</strong> {{hostName}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding: 10px; border-bottom: 1px solid #ddd;">
+                            💬 <strong>Meeting Type:</strong> {{meetingType}}
+                        </td>
+                    </tr>
+                </table>
+
+                <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
+
+                <div style="background-color: #f9fafb; border-left: 4px solid #7e22ce; padding: 16px 20px; margin-bottom: 20px; font-size: 15px; color: #444;">
+                    <strong>Note:</strong> You will receive a reminder email 24 hours prior to your scheduled appointment.
+                </div>
+
+                <!-- Footer Text -->
+                <p style="text-align: center; font-size: 14px;">
+                    If you have any questions, please reply to this email or contact us at 
+                    <a href="mailto:{{businessEmail}}" style="color: #3b82f6; text-decoration: none;">{{businessEmail}}</a>.
+                </p>
+            </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#f0f0f0" style="background-color: #f0f0f0; padding: 10px; text-align: center; color: #555; font-size: 12px;">
+                © {{year}} {{businessName}}. All rights reserved.
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
